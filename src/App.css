@@ -1,11 +1,185 @@
 /* AppNavbar */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 .navBar{
     position: fixed;
     width: 100%;
     top: 0;
-    padding: 1.5rem;
+    padding: 1.2rem;
+    box-shadow: 0px 12px 35px -11px rgba(168,163,168,1);
+    background-color: white;
+    z-index: 4;
 }
 
-.modal{
-    /* margin-top: 1rem; */
+.navBar h1{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 5px;
+    color: rgb(13, 39, 39);
+    text-shadow: 3px -4px 1px rgba(159, 214, 159, 0.9);
+}
+
+.navBar a{
+    color: rgb(34, 33, 33);
+    margin-right: 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.navBar .toggler-button{
+    color: black !important;
+    border: solid 1px black;
+    /* border-radius: 50%; */
+    /* background-color: ; */
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 50px;
+    height: 45px;
+    /* opacity: 0; */
+}
+
+.navBar .toggler-button > div{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+/* up and down line of humburger */
+.navBar .toggler-button > div:before,
+.navBar .toggler-button > div:after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.navBar .toggler-button > div:after{
+    top: 10px
+}
+
+.navBar .navbar-brand{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.sign-in, .sign-up{
+    width: 5rem;
+    text-align: center;
+    border: solid 1px rgb(133, 132, 132); 
+    /* padding: 0.5rem 2rem; */
+    border-radius: 6px;
+    transition: opacity 1s ease-in;
+}
+
+.sign-in:hover, .sign-up:hover,
+.sign-in:active, .sign-up:active
+{
+    opacity: 0.7;
+    border: solid 1px rgb(15, 15, 15); 
+    /* background-color: rgb(132, 241, 89); */
+    /* font-size: 1.02rem; */
+    color: rgb(34, 33, 33);
+}
+
+@media (max-width: 550px){
+    .navBar{
+        color: black;
+        margin-right: 0.1rem;
+    }
+    .sign-in, .sign-up{
+        /* border-radius: 8px; */
+        border: none;
+        text-align: left;
+    }
+    .sign-in:hover, .sign-up:hover,
+    .sign-in:active, .sign-up:active
+    {
+        border: none; 
+        color: rgb(14, 13, 13);
+        background-color: white;
+        opacity: 0.8;
+    }
+    .navBar a{
+        margin-right: 0;
+    }
+}
+
+/* slide-shows */
+.slides-show{
+    width: 100%;
+    /* position: relative; */
+    margin-top: 6rem;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.slides-show img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+/* Search bar */
+.search-bar{
+    width: 60%;
+    position: absolute;
+    top: 25%;
+    background: rgba(255,255,255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+.search-bar input[type="text"]{
+    width: 350px;
+    background-color: inherit;
+    border: solid 2px white;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1.4rem;
+}
+.search-bar h1{
+    font-weight: 800;
+    color: white;
+    font-size: 3.5rem;
+}
+
+.search-bar h3{
+    color: white;
+}
+
+@media (max-width: 550px){
+    .search-bar{
+        display: block;
+        margin-left: 1.5rem;
+        /* flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+        text-align: left;
+    }
+    .search-bar input[type="text"]{
+        width: 200px;
+        background-color: inherit;
+        color: white;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .search-bar h1{
+        font-weight: 800;
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .search-bar h3{
+        color: white;
+    }
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import SignUpModal from './SignUpModal'
 import {
     Collapse,
     Navbar,
@@ -52,11 +51,12 @@ import {
 
     render() {
         return (
-            <div>
-                <Navbar color="dark" dark expand="sm" className="mb-5 navBar">
-                    <Container>
-                        <NavbarBrand href="/">Edeureka</NavbarBrand>
-                        <NavbarToggler onClick={this.toggle}/>
+            <div className="nav-bar">
+                <Navbar  expand="sm" className="mb-5 navBar">
+                        <NavbarBrand href="/" className="navbar-brand"><h1>Edeureka</h1></NavbarBrand>
+                        <NavbarToggler onClick={this.toggle} className="toggler-button">
+                            <div></div>
+                        </NavbarToggler>
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
@@ -69,11 +69,10 @@ import {
                                     <NavLink href="/">Blog</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink onClick={this.toggleSignIn}>
+                                    <NavLink onClick={this.toggleSignIn} className="sign-in">
                                         LogIn
                                     </NavLink>
                                     <Modal
-                                        className="modal"
                                         isOpen={this.state.modalSignIn}
                                         toggle={this.toggleSignIn}
                                     >
@@ -112,11 +111,10 @@ import {
                                     </Modal>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink onClick={this.toggleSignUp}>
+                                    <NavLink onClick={this.toggleSignUp} className="sign-up">
                                         SignUp
                                     </NavLink>
                                     <Modal
-                                        className="modal"
                                         isOpen={this.state.modalSignUp}
                                         toggle={this.toggleSignUp}
                                     >
@@ -163,7 +161,6 @@ import {
                                 </NavItem>
                             </Nav>
                         </Collapse>
-                    </Container>
                 </Navbar>
             </div>
         )
