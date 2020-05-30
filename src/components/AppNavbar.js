@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import logo from './pics/edeureka-logo1.jpg'
 import {
     Collapse,
     Navbar,
@@ -53,7 +54,11 @@ import {
         return (
             <div className="nav-bar">
                 <Navbar  expand="sm" className="mb-5 navBar">
-                        <NavbarBrand href="/" className="navbar-brand"><h1>Edeureka</h1></NavbarBrand>
+                        <NavbarBrand href="/" className="navbar-brand">
+                            <h1>
+                                <img src={logo} />
+                            </h1>
+                        </NavbarBrand>
                         <NavbarToggler onClick={this.toggle} className="toggler-button">
                             <div></div>
                         </NavbarToggler>

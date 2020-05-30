@@ -4,6 +4,12 @@ import './App.css';
 import AppNavbar from './components/AppNavbar';
 import SlideShows from './components/SlideShows';
 import SearchBar from './components/SearchBar';
+import Services from './components/Services';
+import Footer from './components/Footer';
+import StartTeaching from './components/StartTeaching';
+import FeedbackStudentSection from './components/FeedbackStudentSection';
+import Sponsored from './components/Sponsored';
+import ContactUs from './components/ContactUs';
 
 class App extends Component {
   render() {
@@ -16,9 +22,12 @@ class App extends Component {
         <div className="search-bar">
           <SearchBar  />
         </div>
-        <div style={{height:'200vh'}}>
-          
-        </div>
+        <Services />
+        <FeedbackStudentSection />
+        <Sponsored />
+        <StartTeaching />
+        <ContactUs />
+        <Footer />
       </div>
     )
   }
